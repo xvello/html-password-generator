@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password generator</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<script src="js/crypt.js" language="javascript"></script>
+	<script language="javascript">
+		function compute() {
+			f.password.value = b64_sha1(f.master.value+':'+ f.site.value).substr(0,13) + '@1a';
+			f.password.focus();
+			f.password.select();
+		}
+		function doclear() {
+			f.password.value = "";
+			f.site.value = "";
+			f.master.value = "";
+			f.master.focus();
+		}
+	</script>
+  </head>
+
+  <body>
+	<div class="container">
+      <h1>Password Generator</h1>	
+      <form method="POST" name="f" role="form" onsubmit="compute(); return false;">
+		<div class="form-group">
+		  <div class="input-group">
+			<span class="input-group-addon glyphicon glyphicon-pencil"></span>
+			<input type="password" name="master" class="form-control" placeholder="Master passphrase" required autofocus/>
+		  </div>
+		  <div class="input-group">
+			<span class="input-group-addon glyphicon glyphicon-globe"></span>
+            <input type="text" name="site" class="form-control" placeholder="Site URL" required autocorrect="off" autocapitalize="off"/>
+		  </div>
+		  <button class="btn btn-lg btn-primary btn-block" type="submit">Generate password</button>
+		  <div class="input-group">
+		  <input type="text" name="password" class="form-control"/>
+			<span class="input-group-btn">
+			  <button class="btn btn-warning" type="button" onclick="doclear();">Clear all</button>
+			</span>
+		  </div><!-- /input-group -->
+		</div> <!-- /form-group -->
+      </form>
+	  <div class="well">
+	    <p>All the calculations are done locally in your browser, neither your master passphrase nor the generated password are exchanged on the network.</p>
+		<p>Based on <a href="http://angel.net/~nic/passwd.current.html">Nic Wolff's password generator</a>, using the <a href="http://getbootstrap.com">Bootstrap</a> framework and <a href="http://glyphicons.com/">Glyphicons icons</a>.</p>
+	  </div>
+    </div> <!-- /container -->
+  </body>
+</html>
