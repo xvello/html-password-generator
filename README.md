@@ -6,7 +6,7 @@ This static webapp allows you to generate unlimited password from a single maste
 ##How does it work?##
 It mixes  together your personal master password and the website name using a little cryptographic magic we call SHA-1. It will always get the same result if given that domain name and master password, but will never get that result if either changes. (Well, once in a few billion times it might.)
 
-All the calculations are done locally in your browser, neither your master passphrase nor the generated password are exchanged on the network. You can even download it to your mobile phone and run it locally.
+All the calculations are done locally in your browser, neither your master password nor the generated password are exchanged on the network. You can even download it to your mobile phone and run it locally.
 
 ##Thanks##
 
