@@ -1,3 +1,6 @@
+[![Android port](https://img.shields.io/badge/Ported_on-Android-brightgreen.svg)](https://github.com/xvello/qml-password-generator)
+[![Firefox port](https://img.shields.io/badge/Ported_on-Firefox-brightgreen.svg)](https://github.com/xvello/moz-password-generator)
+
 password-generator
 ==================
 
