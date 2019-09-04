@@ -1,4 +1,3 @@
-[![Docker image](https://img.shields.io/badge/Packaged%20in-Docker-blue.svg?style=popout-square&logo=docker)](https://github.com/xvello/images/tree/master/password-generator)
 [![Android port](https://img.shields.io/badge/Ported%20on-Android-green.svg?style=popout-square&logo=android)](https://github.com/xvello/salasana-android)
 [![Firefox port](https://img.shields.io/badge/Ported%20on-Firefox-orange.svg?style=popout-square&logo=mozilla-firefox)](https://github.com/xvello/salasana-webextension)
 
